@@ -33,17 +33,41 @@
 */
 
 const heros = ["spiderman","ironman","batman","antman"]
-console.log(heros);
-console.log(typeof heros);
+// console.log(heros);
+// console.log(typeof heros);
 
 MyObj = {
     name: "lekhana",
     age: 21,
     gender: 'F'
 }
-console.log(MyObj);
+// console.log(MyObj);
 
 const myFunc = function(){
-    console.log("Hello World!")
+    // console.log("Hello World!")
 }
 myFunc()
+
+// -------------------------------------------------------
+// There are two types of memory 
+// 1:Stack(premitive types use stack)
+// 2:Heap(non-premitive types use heap)
+
+let myYouTubeName = "hiteshchoudharydotcom"
+
+let anotherName = myYouTubeName
+anotherName = "ChaiAurCode"
+
+console.log(myYouTubeName);
+console.log(anotherName);
+
+let userOne = {
+    email: "lekhanachidanand08@gmail.com",
+    upiId: "lekh@ybl"
+}
+
+let userTwo = userOne
+
+console.log(userOne.email)
+console.log(userTwo.email)
+
