@@ -56,7 +56,7 @@ const chai = () => {
 // ------------------------------------------------------
 
 const addTwo = (num1,num2)=>{
-    return num1+num2;   //explicite return
+    return num1+num2;   //explicit return
 }
 console.log(addTwo(3,4));
 
@@ -67,3 +67,10 @@ const addTwoNo = (num1,num2) => num1+num2;//implicit return
 console.log(addTwoNo(3,4));
 
 // -------------------------------------------------------
+
+// there is no such huge difference between arrow function and normal function it just makes the code more concise
+// arrow function is an ES6 feature
+//we can implicitly return values using arrow functions
+// it makes it easier to use in callbacks
+
+// callbacks --> callbacks in javascript are those functions that are passed as arguements to other functions and are intend to be executed later
