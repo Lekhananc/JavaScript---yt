@@ -1,0 +1,43 @@
+In JavaScript, the execution context is a critical concept that determines how functions and variables are accessed and executed.
+
+<!-- ------------------------------------------------- -->
+
+Types of Execution Contexts
+JavaScript code runs inside different types of execution contexts:
+
+Global Execution Context:
+
+Created when the JavaScript file is loaded in a browser or Node.js environment.
+In the browser, it refers to the global object window.
+In Node.js, it refers to the global object global.
+
+Function Execution Context:
+
+Created each time a function is invoked.
+Each function call creates a new execution context.
+Has its own variable environment and this value.
+
+Eval Execution Context:
+
+Created when code is executed inside the eval function.
+This is less commonly used and often discouraged due to potential security risks.
+
+<!-- ----------------------------------------------- -->
+
+Execution Context Lifecycle
+Creation Phase:
+
+The execution context is set up.
+The this value is determined.
+The Lexical Environment is created, including variables, functions, and arguments. Variables are hoisted and initially set to undefined.
+Functions are hoisted with their definitions.
+Execution Phase:
+
+The JavaScript code within the execution context is executed line by line.
+Variables and functions are assigned their values.
+Function calls create new execution contexts, added to the call stack.
+
+<!-- ----------------------------------------------- -->
+
+Call Stack
+The call stack is a mechanism for tracking the currently executing context and managing function invocations. Each time a function is called, a new execution context is pushed onto the stack. When the function completes, its context is popped from the stack.
