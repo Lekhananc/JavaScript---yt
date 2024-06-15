@@ -1,0 +1,38 @@
+document.getElementById
+document.getElementById.id
+document.getElementById.className
+//--------------------------------------------------------
+document.getElementById.getAttribute('id')  //title
+document.getElementById.getAttribute('class')   //heading
+document.getElementById.setAttribute('class','test')    //heading,test  //test-undefined
+// -------------------------------------------------------
+const title = document.getElementById('title')   //(for easy access)
+title.style.backgroundColor='green'
+title.style.padding='15px'
+title.style.borderRadius='10px'
+// -------------------------------------------------------
+// IMPORTENT
+
+title.textContent   //gives content present in the element
+title.innerHTML   //gives content present in the element
+title.innerText   //gives content present in the element
+
+// difference innerContent and innerText
+// *using textContent we can access hidden text also
+// but using innerText we cannot see hidden text
+// --------------------------------------------------------
+document.getElementByTagName('p')
+// --------------------------------------------------------
+document.getElementsByClassName('heading')  //heading->className
+// --------------------------------------------------------
+document.querySelector('h1')    //it will give first h1 if we give h1
+document.querySelector(input[type="password"])    
+const myUl = document.querySelector('ul') 
+myUl.querySelector('li')   //it'll select first item list
+// we give css selectors inside the peranthesis
+// values that go inside querySelector is id,class,element etc
+document.querySelectorAll('h1')    //same as querySelector it will give all h1 if we give h1
+// --------------------------------------------------------
+// node list --> for each loop
+// --------------------------------------------------------
+document.

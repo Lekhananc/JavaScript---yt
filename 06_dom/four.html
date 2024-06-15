@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn DOM</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // method 1
+    const addLang = (langName)=>{
+        const newLi = document.createElement('li');
+        newLi.textContent = langName;
+        const ul = document.querySelector('.language');
+        ul.appendChild(newLi);
+    }
+    addLang('Ruby');
+    addLang('Java');
+    addLang('C++');
+    addLang('Python');
+    // it is not optimised method because it traverses the complete tree each time
+    // --------------------------------------
+    // method 2
+    function addOptLang(langName){
+        const li = document.createElement('li');
+        // const addText = document.createTextNode(langName);
+        // li.appendChild(addText);
+        li.appendChild(document.createTextNode(langName));
+        const ul = document.querySelector('.language');
+        ul.appendChild(li);
+    }
+    addOptLang('C');
+    addOptLang('C#');
+    // ----------------------------------------
+
+    // Edit
+
+    const secondLang = document.querySelector('li:nth-child(3)');
+    // secondLang.innerHTML = 'Mojo';
+    const newLi = document.createElement('li');
+    newLi.textContent = "Mojo";
+    secondLang.replaceWith(newLi);
+    // ----------------------------------------
+
+    const firstLang = document.querySelector('li:nth-child(1)');
+    newLiFirst = document.createElement('li');
+    newLiFirst.textContent = 'typescript';
+    firstLang.replaceWith(newLiFirst)
+    // --------------------------------------
+
+    const newLang = document.querySelector('li:nth-child(4)');
+    newLang.outerHTML = '<li>Hello</li>'
+    // ----------------------------------------
+    // remove
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove();
+
+</script>
+</html>

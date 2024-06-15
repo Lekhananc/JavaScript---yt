@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    const newDiv = document.createElement('h1');
+    newDiv.id = 'myId';
+    newDiv.innerHTML = 'This Is A Heading';
+    document.body.appendChild(newDiv);
+
+    const newDivStyle = document.getElementById('myId');
+
+    newDivStyle.style.backgroundColor = 'orange';
+    newDivStyle.style.border = '5px solid green'
+    newDivStyle.style.borderRadius = '10px';
+    newDivStyle.style.color='red';
+    newDivStyle.style.padding='15px';
+    // ----------------------------------
+    const divName = document.createElement('div');
+    divName.innerHTML='Hello'
+    document.body.appendChild(divName)
+    // ---------------------------------------
+    const div = document.createElement('div');
+    console.log(div);
+    div.className = 'main';
+    div.id = Math.round(Math.random()*10+1);
+    // ----------------------------------------
+    div.setAttribute('title','myTitle')
+
+    div.style.backgroundColor = 'green';
+    div.style.padding = '10px';
+    // div.innerHTML = 'Lekhana';
+    document.body.appendChild(div);
+    // ----------------------------------------
+    const addText = document.createTextNode('Lekhana N C');
+    div.appendChild(addText);
+
+</script>
+</html>
