@@ -1,0 +1,30 @@
+Default javascript behaviour:-
+
+JavaScript is synchronus : 
+When we say JavaScript is "synchronous," we mean that JavaScript code executes line by line, in the order it appears in the script. This means that each statement is executed one after another, and the next statement won't begin executing until the previous one has finished.
+
+Single-Threaded Execution: 
+JavaScript operates on a single thread within the browser. This means that at any given time, only one statement is being processed and executed.
+---------------------------------------------------------
+
+blocking code and non blocking code:
+
+blocking code: Blocking code is code that delays or blocks further execution of code until an operation has been completed.
+
+features:
+* Synchronous Execution
+* Halts Execution
+* Potential UI Freeze
+
+non blocking code: Non-blocking code, on the other hand, allows the program to continue executing other code without waiting for the long-running operation to finish
+
+features:
+* Asynchronous Execution
+* Event-driven
+* Improved Responsiveness
+
+-----------------------------------------------------------
+Asynchronus: Asynchronous programming in JavaScript refers to the ability of the JavaScript engine to execute multiple operations concurrently without waiting for each operation to complete before starting the next one.
+-----------------------------------------------------------
+
+In JavaScript, async is a keyword used to define asynchronous functions. Asynchronous functions are functions that operate asynchronously via the event loop, using mechanisms such as Promises and await to enable non-blocking behavior.

@@ -1,0 +1,37 @@
+-> javascript is a synchronus single threaded language
+-> it has one call stack and it can only do one thing at a time
+-> this call stack is present inside the javascript engine
+-> all code in javascriptis executed inside this call stack
+
+------------------------xxxxxxxxx-------------------------
+
+-> the main job of callstack is to execute whatever comes inside it
+-------------------------xxxxxxxxxx-----------------------
+
+Behind the scenes in browser
+
+Js engine is present inside the browser
+
+browser contains:
+* JS engine
+* local storage
+* timer
+* url
+* bluethooth
+* geolocation
+
+----------------------------xxxxxxxxx----------------------
+
+Web API's
+
+* setTimeout()
+* DOM API's
+* fetch()
+* localStorage
+* console
+* location
+
+-> these are all not a part of javascript but a part of browser.
+-> the browser gives access to the call stack to access these functionality
+-----------------------xxxxxxxxx---------------------------
+The event loop is a mechanism that JavaScript uses to handle asynchronous operations. It allows JavaScript to perform tasks like fetching data from an API, handling user interactions, or reading files without stopping the execution of other code. This enables JavaScript to be non-blocking and manage multiple tasks concurrently.
