@@ -1,0 +1,125 @@
+Event Attribute and their Description
+
+
+onclick - Triggered when an element is clicked.
+onmouseover - Fired when the mouse pointer moves over an element.
+onmouseout - Occurs when the mouse pointer leaves an element.
+onkeydown - Fired when a key is pressed down.
+onkeyup - Fired when a key is released.
+onchange - Triggered when the value of an input element changes.
+onload - Occurs when a page has finished loading.
+onsubmit - Fired when a form is submitted.
+onfocus - Occurs when an element gets focus.
+onblur - Fired when an element loses focus.
+
+-------------------------------------------------------------------
+
+(mouse events)
+    1. click: Fired when an element is clicked.
+    2. dblclick: Fired when an element is double-clicked.
+    3. mouseover: Fired when the mouse pointer enters an element.
+    4. mouseout: Fired when the mouse pointer leaves an element.
+    5. mousemove: Fired when the mouse pointer is moved within an element.
+    6. mousedown: Fired when a mouse button is pressed on an element.
+    7. mouseup: Fired when a mouse button is released over an element.
+    8. wheel: Fired when the mouse wheel is scrolled.
+
+    (keyboard events)
+    1. keydown: Fired when a key is pressed down.
+    2. keyup: Fired when a key is released.
+    3. keypress: Fired when a key is pressed down and held. (Deprecated, use keydown and keyup instead)
+
+    (form events)
+    1. submit: Fired when a form is submitted.
+    2. change: Fired when the value of an input element changes and loses focus.
+    3. input: Fired when the value of an input element changes.
+    4. focus: Fired when an element gains focus.
+    5. blur: Fired when an element loses focus.
+
+    (window/document event)
+    1. load: Fired when the whole page (including images and other resources) has fully loaded.
+    2. unload: Fired when the user is navigating away from the page (e.g., closing the window). Not commonly used for modern web applications due to its limitations.
+    3. resize: Fired when the browser window is resized.
+    4. scroll: Fired when the document or an element is scrolled.
+
+    ( Clipboard Events)
+     1. copy: Fired when content is copied.
+     2. cut: Fired when content is cut.
+     3. paste: Fired when content is pasted.
+
+     (Drag and Drop Events)
+     1. dragstart: Fired when the user starts dragging an element.
+     2. dragover: Fired when an element is being dragged over a valid drop target.
+     3. drop: Fired when an element is dropped on a valid drop target.
+
+     (Focus Events)
+     1. focus: Fired when an element gains focus.
+     2. blur: Fired when an element loses focus.
+
+     (Touch Events)
+     1. touchstart: Fired when a touch point is placed on the touch surface.
+     2. touchmove: Fired when a touch point is moved along the touch surface.
+     3. touchend: Fired when a touch point is removed from the touch surface.
+
+     (Media Events)
+     1. play: Fired when the media starts playing.
+     2. pause: Fired when the media is paused.
+     3. ended: Fired when the media has reached the end.
+
+     ----------------------------------------------------------------
+
+     type property:
+
+     The type property in JavaScript events represents the specific kind of event that was triggered. It is a string indicating the name of the event (e.g., "click", "keydown"). This property is crucial when you need to handle different types of events dynamically or want to filter events by their type.
+
+    value of type is same as events(click,dblclick,keyup,keypress)
+
+    --------------------------------------------------------------
+
+    timestamp property:
+
+    The timeStamp property in JavaScript's Event interface provides the time (in milliseconds) at which the event was created.
+
+    --------------------------------------------------------------
+
+    preventDefault():
+
+    The preventDefault method is an essential tool in JavaScript's Event interface, used to stop the default action associated with an event from occurring
+
+    -------------------------------------------------------------
+
+    target property:
+
+    In JavaScript events, the target property refers to the element that triggered the event. 
+
+    -------------------------------------------------------------
+    toElement
+
+    The toElement property is part of older Internet Explorer (IE) browsers and refers to the element the mouse pointer is leaving when using mouse events like mouseout
+
+    srcElement
+
+    Similarly, srcElement is also a proprietary property in older IE browsers, representing the element that triggered the event.
+
+    currentElement
+
+    The currentTarget property refers to the element to which the event listener is attached.
+
+    -------------------------------------------------------------
+    clientX: Represents the horizontal coordinate (X-axis) of the mouse pointer relative to the browser's client area (viewport), excluding any scroll offset.
+
+    clientY: Represents the vertical coordinate (Y-axis) of the mouse pointer relative to the browser's client area (viewport), excluding any scroll offset
+
+    screenX: Represents the horizontal coordinate (X-axis) of the mouse pointer relative to the screen or monitor's display area. 
+
+    screenY: Represents the vertical coordinate (Y-axis) of the mouse pointer relative to the screen or monitor's display area. Like screenX, screenY provides the position across the entire screen.
+
+    ------------------------------------------------------------
+
+    altKey: Indicates whether the Alt key (Option key on macOS) was pressed (true) or not (false) when the event occurred.
+
+    ctrlKey: Indicates whether the Ctrl key (Command key on macOS) was pressed (true) or not (false) when the event occurred.
+
+    shiftKey: Indicates whether the Shift key was pressed (true) or not (false) when the event occurred.
+
+    keyCode: Represents the numeric keyCode of the key that was pressed.

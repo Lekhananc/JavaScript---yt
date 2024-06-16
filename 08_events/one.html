@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+    <style>
+        #box{
+            border: 2px solid white;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+
+   <div id="box"></div>
+
+   <div>
+    <input type="text" id="textInput">
+    <p id="outputText"></p>
+   </div>
+
+   <button id="btn">Click</button>
+</body>
+<script>
+    /*
+    // approach 2
+    // document.getElementById('owl').onclick = function(){
+    //     alert('owl clicked');
+    // }
+
+    // -----------------------------------------------------------
+    document.getElementById('owl').addEventListener('click',function(e){console.log(e);
+    },false);
+
+    // -----------------------------------------------------------
+    // attachEvent()
+    // jQuery - on
+    // ------------------------
+    // type, timestamp, defaultPrevent
+    // target, toElement, sourseElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+
+    // -----------------------------------------------------------
+    const ul = document.getElementsByTagName('ul');
+
+    for(let i = 0;i<ul.length;i++){
+        ul[i].addEventListener('click',(e)=>{
+        console.log('clicked inside ul');
+    })
+    }
+    // ----------------------------------------------------------
+    // Event prpagation(bubbling event) - if any element has two events specified then both events will be fired only specific event get executed before generic event
+
+    document.getElementById('box').addEventListener('click',(e)=>{
+        console.log('clientX: ',e.clientX,'clientY: ',e.clientY)
+        console.log('screenX: ',e.screenX,'screenY: ',e.screenY)
+    })
+// -------------------------------------------------------------
+    const textInput = document.getElementById('textInput');
+
+    textInput.addEventListener('keydown',(e)=>{
+        if(e.ctrlKey && e.altKey && e.shiftKey){
+            alert('control key, shift key and alt key pressed');
+        }
+    })
+
+    // ------------------------------------------------------------
+    const google = document.getElementById('google');
+
+    google.addEventListener('click',(e)=>{
+        e.preventDefault();
+        console.log('Google clicked');
+    })
+    //-------------------------------------------------------------
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click',(e)=>{
+        console.log('Type: ',e.type);
+        console.log('Target: ',e.target);
+        console.log('Target: ',e.target.id);
+    })
+        */
+
+        document.querySelector('#images').addEventListener('click',(e)=>{
+            console.log(e.target.parentNode);
+            let removeit = e.target.parentNode
+            removeit.remove();
+        },false)
+
+</script>
+</html>
