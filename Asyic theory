@@ -1,12 +1,3 @@
-Default javascript behaviour:-
-
-JavaScript is synchronus : 
-When we say JavaScript is "synchronous," we mean that JavaScript code executes line by line, in the order it appears in the script. This means that each statement is executed one after another, and the next statement won't begin executing until the previous one has finished.
-
-Single-Threaded Execution: 
-JavaScript operates on a single thread within the browser. This means that at any given time, only one statement is being processed and executed.
----------------------------------------------------------
-
 blocking code and non blocking code:
 
 blocking code: Blocking code is code that delays or blocks further execution of code until an operation has been completed.
@@ -24,7 +15,106 @@ features:
 * Improved Responsiveness
 
 -----------------------------------------------------------
-Asynchronus: Asynchronous programming in JavaScript refers to the ability of the JavaScript engine to execute multiple operations concurrently without waiting for each operation to complete before starting the next one.
+Default javascript behaviour:-
+
+Single-Threaded Execution: 
+JavaScript operates on a single thread within the browser. This means that at any given time, only one statement is being processed and executed.
+---------------------------------------------------------
+Default javascript behaviour:-
+
+JavaScript is synchronus : 
+When we say JavaScript is "synchronous," we mean that JavaScript code executes line by line, in the order it appears in the script. This means that each statement is executed one after another, and the next statement won't begin executing until the previous one has finished.
+(race)
+ex: task a  - 5s
+    task b  - 2s
+    task d  - 15s
+    task b  - 1s
+
+    total time taken to complete the task = 23s
+
+---------------------------------------------------------
+
+Asynchronus: Asynchronous programming in JavaScript refers to the ability of the JavaScript engine to execute multiple operations at the same time without waiting for each operation to complete before starting the next one. And whichever task completes its execution first will be returned.
+(relay)
+ex: task a  - 5s
+    task b  - 2s
+    task d  - 15s
+    task b  - 1s
+
+    total time taken to complete the task = 15s
+-----------------------------------------------------------
+what is async js?
+
+somethimes the final code is dependent on the some other server in that case we don't know what will be the output. so in that case what we cannot do is write sync code.
+that's why we write async code to prevent blocking so that whenever the output comes we can write code with respect to the provided output.
+-----------------------------------------------------------
+How to know if our code is synchronus or asynchronous
+
+(asynchronus)
+async/await
+setTimeout
+setInterval
+Promises
+fetch
+axios
+XMLHttpRequest
+
+(synchronous)
+console.log("hey")
+console.log("hey2")
+console.log("hey3")
+console.log("hey4")
+
+then catch
+callback
+async/await
+-----------------------------------------------------------
+setTimeout(callback,time in milli secs)
+
+setTimeout(()=>{
+    console.log('hello');
+},2000)
 -----------------------------------------------------------
 
 In JavaScript, async is a keyword used to define asynchronous functions. Asynchronous functions are functions that operate asynchronously via the event loop, using mechanisms such as Promises and await to enable non-blocking behavior.
+-----------------------------------------------------------
+
+consider a scenario
+
+a => synchronous
+b => synchronous
+c => asynchronous
+d => synchronous
+
+There will be two types of stack main stack and side stack
+
+(synchronous code always moves to main stack)
+a --> moved to main stack(whatever will be in the main stack will output the result)
+b --> moved to main stack
+d --> moved to main stack
+
+c --> moved to side stack(whatever will be in the main stack will do behind the scene processing and will be sent to main stack which will then outputs the result)
+
+
+a -> completed ->removed -> b ->started ->b ->completed ->b ->removed ->d ->started ->d ->completed ->d ->removed
+
+whenever main stack become empty then side stack will be checked if output present then c will be brought into main stack
+-----------------------------------------------------------
+
+callback
+
+-->callback is a function
+-->this will only run when async code execution is completed
+-->callback is a function that is passed as an argument to another function and wait for it's execution after the execution of previous function is completed
+-----------------------------------------------------------
+Promises
+
+Promises provide a cleaner way to handle asynchronous asynchronous operations compared to traditional callback functions.
+A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+A promise can have 2 situations
+1. resolve
+2. reject
+
+--> Pending: The initial state, meaning the operation has not yet completed or failed.
+--> Fulfilled: The operation has completed successfully, and the promise now holds the resulting value.
+--> Rejected: The operation has failed, and the promise holds a reason for the failure (usually an error).

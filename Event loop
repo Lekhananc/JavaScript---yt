@@ -1,7 +1,7 @@
 -> javascript is a synchronus single threaded language
 -> it has one call stack and it can only do one thing at a time
 -> this call stack is present inside the javascript engine
--> all code in javascriptis executed inside this call stack
+-> all code in javascript is executed inside this call stack
 
 ------------------------xxxxxxxxx-------------------------
 

@@ -1,0 +1,1 @@
+// fetch('https://google.com').then().catch().finally()
